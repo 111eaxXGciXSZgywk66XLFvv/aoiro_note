@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>aoiro note あおいのポートフォリオ</title>
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;500;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="top"></div>
+  <header>
+    <div class="container flex">
+      <a href="#top" class="logo">
+        <span>aoiro</span> note
+      </a>
+      <nav>
+        <ul class="header_menu flex">
+          <li><a href="#top">Top</a></li>
+          <li><a href="works/archive.html">Works</a></li>
+          <li><a href="about/about.html">About me</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hamburger" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-menu" id="js-nav">
+      <ul>
+        <li><a href="#top">Top</a></li>
+        <li><a href="works/archive.html">Works</a></li>
+        <li><a href="about/about.html">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="main-visual">
+      <div class="video-container">
+        <video src="images/mainvisual.mp4" autoplay muted loop playsinline class="mv-video pc"></video>
+        <a href="works/projects/motion-graphics/code-arc.html" class="video-link-overlay overlay-motion"></a>
+        <a href="works/projects/graphic-design/kawano.html" class="video-link-overlay overlay-graphic"></a>
+        <a href="works/projects/illustration/astral-library.html" class="video-link-overlay overlay-illust"></a>
+        <a href="works/projects/animation/my-cm.html" class="video-link-overlay overlay-animation"></a>
+        <a href="works/projects/other/meishi.html" class="video-link-overlay overlay-other"></a>
+
+        <video src="images/mainvisual-mobile.mp4" autoplay muted loop playsinline class="my-video mobile"></video>
+        <a href="works/projects/motion-graphics/code-arc.html" id="dynamic-link" class="video-link-overlay overlay-mobile"></a>
+
+
+      </div>
+      <div class="mv-content">
+        <h2 class="mv-copy">Portfolio of Aoi Nonomiya</h2>
+        <div class="scroll-down">
+          <span>scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="Works" class="works">
+      <h2 class="section-title">Works</h2>
+
+      <div class="works-grid">
+
+        <a href="works/projects/web-site/portfolio.html" class="work-item">
+          <p class="category">— web design —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/site-mainvisual.png" alt="web site work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Portfolio site「aoiro note」</h3>
+              <p class="work-description">
+                自身のポートフォリオサイト</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="works/projects/motion-graphics/code-arc.html" class="work-item">
+          <p class="category">— motion graphics —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/aetherスクショ.png" alt="motion graphics work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Code Arc</h3>
+              <p class="work-description">
+                3Dの扇形が回転するモーショングラフィック</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="works/projects/graphic-design/kawano.html" class="work-item">
+          <p class="category">— graphic design —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/kawano01.png" alt="graphic design work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">新事業告知パンフレット <br><span class="suppl">株式会社KAWANO(インターン)</span></h3>
+              <p class="work-description">
+                垂直保管システム「Modula」導入支援を告知するパンフレット</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="works/projects/illustration/astral-library.html" class="work-item">
+          <p class="category">— illustration —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/地金.jpg" alt="illustration work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Astral library</h3>
+              <p class="work-description">
+                創作:魔法図書館の司書・調査員</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="works/projects/animation/my-cm.html" class="work-item">
+          <p class="category">— animation —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/my-cm.png" alt="animation work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">自分CM</h3>
+              <p class="work-description">
+                自身をアピールするモーションイラストレーション</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="works/projects/other/meishi.html" class="work-item">
+          <p class="category">— other —</p>
+
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="images/meishi.png" alt="other work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">バイリンガル名刺</h3>
+              <p class="work-description">
+                テキストだけを用いたシンプルな名刺</p>
+              <span class="learn-more">Learn more</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="more-btn-container">
+        <a href="works/archive.html" class="more-btn">
+          View More
+          <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="About-me" class="about-section container">
+      <h2 class="section-title">About me</h2>
+
+      <div class="about-flex">
+        <div class="about-image">
+          <img src="images/icon.png" alt="プロフィール画像">
+        </div>
+
+        <div class="about-text">
+          <h3>ののみや あおい / Aoi Nonomiya</h3>
+          <p>
+            神戸芸術工科大学 芸術工学部 ビジュアルデザイン学科 奥谷ゼミ
+          </p>
+          <ul class="skills">
+            <li>#Web Design</li>
+            <li>#Motion Graphics</li>
+            <li>#Graphic Design</li>
+          </ul>
+          <section id="about" class="container">
+            <div class="view-more-area">
+              <a href="about/about.html" class="btn-view-more">VIEW MORE</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>aoiro</span> note
+        </div>
+
+        <ul class="footer-sns">
+          <li><a href="https://x.com/MacchaMilk2255" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://instagram.com/nonomiya.825" target="_blank">Instagram</a></li>
+        </ul>
+
+        <p class="copyright">&copy; 2025 aoiro note / Aoi Nonomiya</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top">
+    <span class="arrow">↑</span>
+    TOP
+  </a>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: 1px solid #8ba1c1;
+  border-radius: 20px;
+  background: transparent;
+  color: #8ba1c1;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: #8ba1c1;
+  color: #f0f2f4;
+}
+.work-card p {
+    color: #8ba1c1;
+    margin-top: -20px;
+}
+
+/* 消える時のアニメーション */
+.work-item {
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.work-item.hide {
+  display: none;
+}
+
+/* Back to topボタン */
+.back-to-top-btn-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.back-to-top-btn {
+  display: inline-block;
+  padding: 15px 50px;
+  background-color: transparent;
+  color: #8ba1c1;
+  border: 2px solid #8ba1c1;
+  font-weight: 550;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* ホバーした時の動き */
+.back-to-top-btn:hover {
+  background-color: #8ba1c1;
+  color: #f0f2f4;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(154, 181, 201, 0.4);
+}
+
+/* 矢印の動き */
+.btn-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: translateX(-5px);
+}

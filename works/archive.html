@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>aoiro note あおいのポートフォリオ</title>
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+
+  <!-- style.css -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- archive.css -->
+  <link rel="stylesheet" href="../works/css/archive.css">
+
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;500;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="top"></div>
+  <header>
+    <div class="container flex">
+      <a href="../#top" class="logo">
+        <span>aoiro</span> note
+      </a>
+      <nav>
+        <ul class="header_menu flex">
+          <li><a href="../index.html">Top</a></li>
+          <li><a href="archive.html">Works</a></li>
+          <li><a href="../about/about.html">About me</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hamburger" id="js-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-menu" id="js-nav">
+      <ul>
+        <li><a href="../index.html">Top</a></li>
+        <li><a href="archive.html">Works</a></li>
+        <li><a href="../about/about.html">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="Works" class="works">
+      <h2 class="section-title">Works</h2>
+
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="web design">web design</button>
+        <button class="filter-btn" data-filter="motion graphics">motion graphics</button>
+        <button class="filter-btn" data-filter="graphic design">graphic design</button>
+        <button class="filter-btn" data-filter="illustration">illustration</button>
+        <button class="filter-btn" data-filter="animation">animation</button>
+        <button class="filter-btn" data-filter="other">other</button>
+      </div>
+
+      <div class="works-grid">
+        <a href="projects/web-site/portfolio.html" class="work-item" data-category="web design">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/site-mainvisual.png" alt="web design work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Portfolio site「aoiro note」</h3>
+            </div>
+            <p>#web design</p>
+          </div>
+        </a>
+
+        <a href="projects/motion-graphics/code-arc.html" class="work-item" data-category="motion graphics">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/aetherスクショ.png" alt="motion work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Code Arc</h3>
+            </div>
+            <p>#motion graphics</p>
+          </div>
+        </a>
+
+        <a href="projects/graphic-design/kawano.html" class="work-item" data-category="graphic design">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/kawano01.png" alt="graphic design work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">新事業告知パンフレット <br><span class="suppl">株式会社KAWANO(インターン)</span></h3>
+            </div>
+            <p>#graphic design</p>
+          </div>
+        </a>
+
+        <a href="projects/illustration/astral-library.html" class="work-item" data-category="illustration">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/地金.jpg" alt="illustration work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">Astral Library</h3>
+            </div>
+            <p>#illustration</p>
+          </div>
+        </a>
+
+        <a href="projects/animation/my-cm.html" class="work-item" data-category="animation">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/my-cm.png" alt="animation work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">自分CM</h3>
+            </div>
+            <p>#animation</p>
+          </div>
+        </a>
+
+        <a href="projects/other/meishi.html" class="work-item" data-category="other">
+          <div class="work-card">
+            <div class="image-wrapper">
+              <img src="../images/meishi.png" alt="other work">
+            </div>
+            <div class="work-content">
+              <h3 class="work-title-text">名刺制作</h3>
+            </div>
+            <p>#other</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="back-to-top-btn-container">
+        <a href="../index.html" class="back-to-top-btn">
+          ←
+          <span class="btn-arrow">back-to-top</span>
+        </a>
+      </div>
+
+  </main>
+
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const workItems = document.querySelectorAll('.work-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 1. ボタンの「active」クラスを付け替える
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 2. フィルタリング処理
+        const filterValue = button.getAttribute('data-filter');
+
+        workItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block'; // 表示
+          } else {
+            item.style.display = 'none'; // 非表示
+          }
+        });
+      });
+    });
+  </script>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>aoiro</span> note
+        </div>
+
+        <ul class="footer-sns">
+          <li><a href="https://x.com/MacchaMilk2255" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://instagram.com/nonomiya.825" target="_blank">Instagram</a></li>
+        </ul>
+
+        <p class="copyright">&copy; 2025 aoiro note / Aoi Nonomiya</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top">
+    <span class="arrow">↑</span>
+    TOP
+  </a>
+
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

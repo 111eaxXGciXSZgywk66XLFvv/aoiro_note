@@ -1,0 +1,294 @@
+.project-header {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 15px 0;
+  color: #433838;
+}
+
+/* メイン画像 */
+.project-hero-img {
+  text-align: center; /* 中身（画像）を中央に寄せる */
+  margin-bottom: 80px;
+}
+
+.project-hero-img img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* 画像を並べる親要素 */
+.main-visual-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* 中の画像の設定 */
+.main-visual-grid img {
+  width: 48%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* コンセプト情報のグリッド */
+.project-info {
+  padding: 10px 0 100px;
+}
+
+.info-grid {
+  display: flex;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-left { flex: 2; }
+.info-right { flex: 1; border-left: 1px solid #ddd; padding-left: 40px; }
+
+.info-left h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8ba1c1;
+  margin-bottom: 20px;
+}
+
+.info-right dl dt {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #8ba1c1;
+  margin-top: 15px;
+}
+
+/* ギャラリー */
+
+.gallery-text h4{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.gallery-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 120px;
+}
+
+.gallery-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.gallery-text {
+  flex: 1;
+ }
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  width: 50%;
+  margin: 50px 0;
+ }
+
+.gallery-img  {
+ flex: 1;
+ max-width: 400px;
+}
+
+.gallery-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* 戻るボタン */
+.project-footer-nav {
+  text-align: center;
+  padding: 60px 0 120px;
+}
+
+.back-link {
+  padding: 10px 30px;
+  border-bottom: 2px solid #8ba1c1;
+  color: #433838;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.back-link:hover {
+  background-color: #8ba1c1;
+  color: #f0f2f4;
+}
+
+/* ポートフォリオサイト 動画用 */
+
+.image-wrapper {
+  align-content: center;
+}
+
+.works-video {
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+
+/* astral library スライダー用 */
+.splide {
+  margin: 40px auto 80px;
+  width: 80%;
+}
+
+#splide__list{
+    position: relative;
+}
+
+
+.splide__slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 500;
+}
+
+.splide__arrow svg {
+  fill: #8ba1c1;
+}
+
+.splide__arrow {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #8ba1c1;
+  z-index: 1;
+}
+
+.splide__arrow--prev {
+  left: -50px;
+}
+.splide__arrow--next {
+  right: -50px;
+}
+
+/* 下のドット（現在地）の色を変える */
+.splide__pagination__page.is-active {
+  background: #8ba1c1;
+}
+
+.splide__pagination__page {
+    bottom: -50px;
+}
+
+.splide__pagination{
+    z-index: 1;
+}
+
+.lum-lightbox {
+  z-index: 1000;
+}
+
+
+/* code ark */
+
+.main-video {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.link-button-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-external {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #c1cbda;
+  color: #f0f2f4;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 40px;
+}
+
+.btn-external:hover {
+  background-color: #8ba1c1;
+  transform: translateY(-3px);
+}
+
+.extra-web-project {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.extra-title h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8ba1c1;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.extra-title p {
+  color: #433838;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.extra-visual img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.extra-link-area {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .info-grid, .gallery-row, .gallery-row.reverse { 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .concept-box, .role-box {
+    width: 90%;
+  }
+
+  .gallery {
+    display: flex;
+    align-content: center;
+    width: 90%;
+  }
+
+  .gallery-img {
+    flex: 1;
+
+  }
+
+}
