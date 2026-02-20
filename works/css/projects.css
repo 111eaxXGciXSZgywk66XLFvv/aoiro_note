@@ -12,7 +12,8 @@
 
 /* メイン画像 */
 .project-hero-img {
-  text-align: center; /* 中身（画像）を中央に寄せる */
+  text-align: center;
+  /* 中身（画像）を中央に寄せる */
   margin-bottom: 80px;
 }
 
@@ -21,7 +22,7 @@
   max-width: 800px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 /* 画像を並べる親要素 */
@@ -37,8 +38,15 @@
   width: 48%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .main-visual-grid img {
+    width: 80%;
+    height: auto;
+  }
 }
 
 /* コンセプト情報のグリッド */
@@ -53,8 +61,15 @@
   margin: 0 auto;
 }
 
-.info-left { flex: 2; }
-.info-right { flex: 1; border-left: 1px solid #ddd; padding-left: 40px; }
+.info-left {
+  flex: 2;
+}
+
+.info-right {
+  flex: 1;
+  border-left: 1px solid #ddd;
+  padding-left: 40px;
+}
 
 .info-left h3 {
   font-family: "Nunito", sans-serif;
@@ -73,9 +88,9 @@
 
 /* ギャラリー */
 
-.gallery-text h4{
-    font-weight: 700;
-    margin-bottom: 30px;
+.gallery-text h4 {
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .gallery-row {
@@ -90,8 +105,8 @@
 }
 
 .gallery-text {
-  flex: 1;
- }
+  flex: 4;
+}
 
 .gallery {
   display: flex;
@@ -99,11 +114,10 @@
   gap: 10%;
   width: 50%;
   margin: 50px 0;
- }
+}
 
-.gallery-img  {
- flex: 1;
- max-width: 400px;
+.gallery-img {
+  flex: 6;
 }
 
 .gallery-img img {
@@ -151,8 +165,8 @@
   width: 80%;
 }
 
-#splide__list{
-    position: relative;
+#splide__list {
+  position: relative;
 }
 
 
@@ -161,7 +175,7 @@
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 500;
 }
 
@@ -178,6 +192,7 @@
 .splide__arrow--prev {
   left: -50px;
 }
+
 .splide__arrow--next {
   right: -50px;
 }
@@ -188,11 +203,11 @@
 }
 
 .splide__pagination__page {
-    bottom: -50px;
+  bottom: -50px;
 }
 
-.splide__pagination{
-    z-index: 1;
+.splide__pagination {
+  z-index: 1;
 }
 
 .lum-lightbox {
@@ -208,7 +223,7 @@
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
 
 .link-button-area {
@@ -260,7 +275,7 @@
   max-width: 900px;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
   margin-bottom: 30px;
 }
 
@@ -269,14 +284,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .info-grid, .gallery-row, .gallery-row.reverse { 
+
+  .info-grid,
+  .gallery-row,
+  .gallery-row.reverse {
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: flex-start;
   }
 
-  .concept-box, .role-box {
+  .concept-box,
+  .role-box {
     width: 90%;
   }
 
