@@ -1,17 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   
+  // ハンバーガーメニュー
   const hamburger = document.getElementById('js-hamburger');
   const nav = document.getElementById('js-nav');
 
-  // ハンバーガーメニューの開閉
   if (hamburger && nav) {
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       nav.classList.toggle('active');
     });
 
-    const navLinks = nav.querySelectorAll('a');
-    navLinks.forEach(link => {
+    nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         nav.classList.remove('active');
@@ -19,53 +18,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-});
-
-
-// モバイル メインビジュアル
-
-window.addEventListener('DOMContentLoaded', () => {
+  // メインビジュアル リンク同期
   const projectLinks = [
     "works/projects/motion-graphics/code-arc.html",
     "works/projects/graphic-design/kawano.html",
     "works/projects/animation/my-cm.html"
   ];
 
-  let currentIndex = 0;
+  const linkElements = document.querySelectorAll('.dynamic-link');
+  const DURATION_PER_SLIDE = 6.00;
 
-  const linkElement = document.getElementById('dynamic-link');
+  const getActiveVideo = () =>
+    document.querySelector(window.innerWidth < 768 ? '.mobile' : '.pc');
 
-  if (!linkElement) {
-    console.log("スライドショーリンクがないページなので、タイマーを停止しました");
-    return;
-  }
+  let video = getActiveVideo();
 
-  function updateLink() {
-    currentIndex = (currentIndex + 1) % projectLinks.length;
-    linkElement.href = projectLinks[currentIndex];
-    console.log("リンクを更新:", linkElement.href);
-  }
-
-  setInterval(updateLink, 7250);
-});
-
-
-// フェードイン
-
-window.addEventListener('DOMContentLoaded', () => {
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            }
-        });
-    }, {
-        threshold: 0.1
+  const syncLinks = () => {
+    if (!video) return;
+    const index = Math.min(
+      Math.floor(video.currentTime / DURATION_PER_SLIDE),
+      projectLinks.length - 1
+    );
+    linkElements.forEach(link => {
+      if (link.getAttribute('data-current-index') !== String(index)) {
+        link.href = projectLinks[index];
+        link.setAttribute('data-current-index', index);
+      }
     });
+  };
 
-    fadeElements.forEach(el => {
-        observer.observe(el);
+  if (video) video.addEventListener('timeupdate', syncLinks);
+
+  window.addEventListener('resize', () => {
+    const newVideo = getActiveVideo();
+    if (newVideo !== video) {
+      video?.removeEventListener('timeupdate', syncLinks);
+      video = newVideo;
+      video?.addEventListener('timeupdate', syncLinks);
+    }
+  });
+
+  // フェードイン
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
     });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 });

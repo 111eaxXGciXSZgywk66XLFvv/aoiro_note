@@ -279,29 +279,9 @@ main {
   background-color: rgba(139, 161, 193, 0.5);
 }
 
-.overlay-graphic {
- clip-path: polygon(
-    23% 0%, 48.2% 0%, 48.2% 47%, 23% 51%);
-}
-
-.overlay-motion {
- clip-path: polygon(
-    3% 23%, 25% 26%, 25% 54%, 3% 68%);
-}
-
-.overlay-illust {
- clip-path: polygon(
-    54.5% 50%, 65.5% 47%, 66.5% 61.5%, 55.5% 65.5%);
-}
-
 .overlay-animation {
  clip-path: polygon(
-    27% 26%, 50% 27%, 50% 50%, 27% 55%);
-}
-
-.overlay-other {
- clip-path: polygon(
-    18% 64%, 26% 59%, 30% 75%, 22.5% 82%);
+    20.6% 12.5%, 55.2% 13.5%, 55.2% 47.5%, 20.6% 54.4%);
 }
 
 @media screen and (min-width: 769px) {
