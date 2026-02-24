@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 768px) {
   .main-visual-grid img {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 }
@@ -153,7 +153,7 @@
 
 .works-video {
   display: block;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   margin: 30px auto;
 }
@@ -280,7 +280,7 @@
 }
 
 .extra-link-area {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
