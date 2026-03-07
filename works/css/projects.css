@@ -125,26 +125,6 @@
   border-radius: 15px;
 }
 
-/* 戻るボタン */
-.project-footer-nav {
-  text-align: center;
-  padding: 60px 0 120px;
-}
-
-.back-link {
-  padding: 10px 30px;
-  border-bottom: 2px solid #8ba1c1;
-  color: #433838;
-  font-weight: 700;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.back-link:hover {
-  background-color: #8ba1c1;
-  color: #f0f2f4;
-}
-
 /* ポートフォリオサイト 動画用 */
 
 .image-wrapper {

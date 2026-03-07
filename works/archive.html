@@ -176,33 +176,10 @@
           <span class="btn-arrow">back-to-top</span>
         </a>
       </div>
-
+      
+    </section>
   </main>
 
-
-  <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const workItems = document.querySelectorAll('.work-item');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // 1. ボタンの「active」クラスを付け替える
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // 2. フィルタリング処理
-        const filterValue = button.getAttribute('data-filter');
-
-        workItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.style.display = 'block'; // 表示
-          } else {
-            item.style.display = 'none'; // 非表示
-          }
-        });
-      });
-    });
-  </script>
   <footer>
     <div class="container">
       <div class="footer-content">

@@ -11,6 +11,9 @@
     width: 100%;
     align-items: center;
     margin-bottom: 80px;
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 40px;
 }
 
 .profile-image-box {
@@ -42,23 +45,92 @@
     margin-bottom: 100px;
 }
 
-
-/* スマホ対応 */
-@media (max-width: 768px) {
-    .profile-upper {
-        flex-direction: column;
-        gap: 20px;
-    }
+.profile-description {
+    font-size: 0.9rem;
+    margin: 16px 0;
 }
 
-.profile-logo {
-    width: 120px;
+.image-description {
+    font-size: 0.75rem;
+    margin-bottom: 40px;
+}
+
+/* about me 開閉部分 */
+
+.more-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+.more-content.is-open {
+    max-height: 2000px;
+    opacity: 1;
+    margin-top: 15px;
+}
+.readmore {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 40px;
+    background-color: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.readmore .close {
+    display: none;
+}
+
+.readmore.on-click .open {
+    display: none;
+}
+.readmore.on-click .close {
+    display: inline;
+}
+
+
+/* 画像アップ表示 */
+.lum-lightbox {
+  z-index: 200;
+}
+
+.lum-lightbox-close-button {
+  display: block;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.about-me-image {
+    display: block;
+    width: 90%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.about-me-image img {
+    width: 100%;
     height: auto;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.05));
+    display: block;
 }
+
+/* スキル */
 
 .skill-list {
-    max-width: 1000px;
+    width:fit-content;
     margin: 0 auto;
 }
 
@@ -72,7 +144,7 @@
     width: 180px;
     flex-shrink: 0;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* ドットの親要素 */
@@ -164,7 +236,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #fff;
         gap: 30px;
+        padding: 40px;
+        border-radius: 16px;
     }
 
     .profile-basic-info-box {

@@ -27,7 +27,7 @@
   <header>
     <div class="container flex">
       <a href="#top" class="logo">
-        <span>aoiro</span> note
+        <h1><span>aoiro</span> note</h1>
       </a>
       <nav>
         <ul class="header_menu flex">
@@ -57,26 +57,34 @@
   <main>
     <section class="main-visual">
       <div class="video-container fade-in">
+        <h2 class="mv-copy">Portfolio of Aoi Nonomiya</h2>
         <video id="mv-video" src="images/mainvisual.mp4" autoplay muted loop playsinline class="mv-video pc"></video>
         <a href="works/projects/motion-graphics/code-arc.html" class="video-link-overlay overlay-animation dynamic-link"></a>
         <video src="images/mainvisual-mobile.mp4" autoplay muted loop playsinline class="my-video mobile"></video>
         <a href="works/projects/motion-graphics/code-arc.html"
           class="video-link-overlay overlay-mobile dynamic-link"></a>
       </div>
-      <div class="mv-content fade-in">
-        <h2 class="mv-copy">Portfolio of Aoi Nonomiya</h2>
-        <div class="scroll-down">
+      <div class="scroll-down fade-in">
           <span>scroll</span>
-        </div>
       </div>
     </section>
 
     <section id="Works" class="works">
       <h2 class="section-title fade-in">Works</h2>
 
-      <div class="works-grid fade-in">
+       <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="web design">web design</button>
+        <button class="filter-btn" data-filter="motion graphics">motion graphics</button>
+        <button class="filter-btn" data-filter="graphic design">graphic design</button>
+        <button class="filter-btn" data-filter="illustration">illustration</button>
+        <button class="filter-btn" data-filter="animation">animation</button>
+        <button class="filter-btn" data-filter="other">other</button>
+      </div>
 
-        <a href="works/projects/web-site/portfolio.html" class="work-item">
+      <div class="works-grid">
+
+        <a href="works/projects/web-site/portfolio.html" class="work-item fade-in" data-category="web design">
           <p class="category">— web design —</p>
 
           <div class="work-card">
@@ -92,7 +100,7 @@
           </div>
         </a>
 
-        <a href="works/projects/motion-graphics/code-arc.html" class="work-item">
+        <a href="works/projects/motion-graphics/code-arc.html" class="work-item fade-in" data-category="motion graphics">
           <p class="category">— motion graphics —</p>
 
           <div class="work-card">
@@ -108,7 +116,7 @@
           </div>
         </a>
 
-        <a href="works/projects/graphic-design/kawano.html" class="work-item">
+        <a href="works/projects/graphic-design/kawano.html" class="work-item fade-in" data-category="graphic design">
           <p class="category">— graphic design —</p>
 
           <div class="work-card">
@@ -124,7 +132,7 @@
           </div>
         </a>
 
-        <a href="works/projects/illustration/astral-library.html" class="work-item">
+        <a href="works/projects/illustration/astral-library.html" class="work-item fade-in" data-category="illustration">
           <p class="category">— illustration —</p>
 
           <div class="work-card">
@@ -140,7 +148,7 @@
           </div>
         </a>
 
-        <a href="works/projects/animation/my-cm.html" class="work-item">
+        <a href="works/projects/animation/my-cm.html" class="work-item fade-in"  data-category="animation">
           <p class="category">— animation —</p>
 
           <div class="work-card">
@@ -156,7 +164,7 @@
           </div>
         </a>
 
-        <a href="works/projects/other/meishi.html" class="work-item">
+        <a href="works/projects/other/meishi.html" class="work-item fade-in" data-category="other">
           <p class="category">— other —</p>
 
           <div class="work-card">
@@ -181,7 +189,7 @@
     </section>
 
     <section id="About-me" class="about-section container">
-      <h2 class="section-title">About me</h2>
+      <h2 class="section-title">Profile</h2>
 
       <div class="about-flex">
         <div class="about-image fade-in">
@@ -200,7 +208,7 @@
           </ul>
           <section id="about" class="container">
             <div class="view-more-area">
-              <a href="about/about.html" class="btn-view-more">VIEW MORE</a>
+              <a href="about/about.html" class="btn-view-more">READ MORE</a>
             </div>
           </section>
         </div>
