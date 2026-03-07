@@ -74,9 +74,11 @@
     margin: 30px auto;
     padding: 10px 40px;
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid #c1cbda;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 14px;
+    color: #8ba1c1;
     transition: all 0.3s;
 }
 
