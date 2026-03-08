@@ -215,7 +215,8 @@ main {
   margin-bottom: 60px;
 }
 
-.mv-video, .mobile {
+.mv-video,
+.mobile {
   position: relative;
   width: 100%;
   height: auto;
@@ -251,10 +252,12 @@ main {
   margin-left: 15px;
 }
 
+
+/* メインビジュアル 選択部分 */
 .video-container {
   position: relative;
   width: 100%;
-  margin-bottom: 90px;
+  line-height: 0;
 }
 
 .video-link-overlay {
@@ -263,34 +266,46 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(139, 161, 193, 0);
   z-index: 10;
   cursor: pointer;
+  background-color: rgba(139, 161, 193, 0);
+  transition: background-color 0.1s;
+
+  clip-path: polygon(20.6% 12%, 55.2% 13%, 55.2% 47.7%, 20.7% 54.4%);
 }
 
 .video-link-overlay:hover {
-  background-color: rgba(139, 161, 193, 0.5);
-}
-
-.overlay-animation {
- clip-path: polygon(
-    20.6% 30.9%, 55.2% 31.9%, 55.2% 58.7%, 20.6% 64.3%);
+  background-color: rgba(139, 161, 193, 0.6);
 }
 
 @media screen and (min-width: 769px) {
-    .pc, .video-link-overlay{ display: block; }
-    .mobile, .overlay-mobile{ display: none; }
-}
 
+  .pc,
+  .pc-overlay {
+    display: block;
+  }
 
-.overlay-mobile {
-   clip-path: polygon(
-    2% 40%, 73% 39.8%, 73% 61.2%, 1.3% 66.5%);
+  .mobile,
+  .mobile-overlay {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .pc, .video-link-overlay{ display: none; }
-    .mobile, .overlay-mobile { display: block; }
+
+  .pc,
+  .pc-overlay {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile-overlay {
+    display: block;
+    clip-path: polygon(2% 30.4%, 73% 30.2%, 73% 55.2%, 1.2% 61.2%);
+  }
 }
 
 
@@ -300,6 +315,7 @@ main {
   position: relative;
   width: 100%;
   text-align: center;
+  margin-top: 40px;
 }
 
 .scroll-down span {
@@ -421,7 +437,8 @@ main {
   transition: all 0.3s;
 }
 
-.filter-btn.active, .filter-btn:hover {
+.filter-btn.active,
+.filter-btn:hover {
   background: #8ba1c1;
   color: #f0f2f4;
 }

@@ -64,16 +64,16 @@
 
   <main>
     <section class="main-visual">
-      <div class="video-container fade-in">
+      <div class="fade-in">
         <h2 class="mv-copy">Portfolio of Aoi Nonomiya</h2>
-        <video id="mv-video" src="images/mainvisual.mp4" autoplay muted loop playsinline class="mv-video pc"></video>
-        <a href="works/projects/motion-graphics/code-arc.html"
-          class="video-link-overlay overlay-animation dynamic-link"></a>
-        <video src="images/mainvisual-mobile.mp4" autoplay muted loop playsinline class="my-video mobile"></video>
-        <a href="works/projects/motion-graphics/code-arc.html"
-          class="video-link-overlay overlay-mobile dynamic-link"></a>
+        <div class="video-container">
+          <video id="mv-video" src="images/mainvisual.mp4" autoplay muted loop playsinline class="mv-video pc"></video>
+          <video src="images/mainvisual-mobile.mp4" autoplay muted loop playsinline class="mv-video mobile"></video>
+          <a href="works/projects/motion-graphics/code-arc.html" class="video-link-overlay pc-overlay"></a>
+          <a href="works/projects/motion-graphics/code-arc.html" class="video-link-overlay mobile-overlay"></a>
+        </div>
       </div>
-      <div class="scroll-down fade-in">
+      <div class="scroll-down">
         <span>scroll</span>
       </div>
     </section>
