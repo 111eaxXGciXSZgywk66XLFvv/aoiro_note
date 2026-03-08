@@ -18,11 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // About me 開閉
+  const aboutBtn = document.getElementById('js-about-toggle');
+  const aboutContent = document.getElementById('js-more-content');
+
+  if (aboutBtn && aboutContent) {
+    aboutBtn.addEventListener('click', function () {
+      this.classList.toggle('on-click');
+      aboutContent.classList.toggle('is-open');
+    });
+  }
+
   // メインビジュアル リンク同期
   const projectLinks = [
-    "works/projects/motion-graphics/code-arc.html",
-    "works/projects/graphic-design/kawano.html",
-    "works/projects/animation/my-cm.html"
+    'works/projects/motion-graphics/code-arc.html',
+    'works/projects/graphic-design/kawano.html',
+    'works/projects/animation/my-cm.html',
   ];
 
   const linkElements = document.querySelectorAll('.dynamic-link');
@@ -58,48 +69,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //Worksのフィルタリング機能
+  // Works フィルタリング
   const filterBtns = document.querySelectorAll('.filter-btn');
   const items = document.querySelectorAll('.work-item');
 
   if (filterBtns.length > 0 && items.length > 0) {
     filterBtns.forEach(button => {
       button.addEventListener('click', () => {
-
         filterBtns.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
         const filterValue = button.getAttribute('data-filter');
-
         items.forEach(item => {
           const category = item.getAttribute('data-category');
-          if (filterValue === 'all' || category === filterValue) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
+          item.style.display =
+            (filterValue === 'all' || category === filterValue) ? 'block' : 'none';
         });
       });
     });
   }
 
-  // --- ページ遷移時の自動フィルタリング ---
+  // ページ遷移時の自動フィルタリング
   const hash = window.location.hash;
-
   if (hash) {
     const filterTarget = hash.replace('#', '').replace('-', ' ');
     const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterTarget}"]`);
-
     if (targetBtn) {
       targetBtn.click();
-
       const worksSection = document.getElementById('Works');
-      if (worksSection) {
-        worksSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (worksSection) worksSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
 
   // フェードイン
   const observer = new IntersectionObserver(entries => {
@@ -109,30 +109,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.3 });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  const aboutBtn = document.getElementById('js-about-toggle');
-  const aboutContent = document.getElementById('js-more-content');
-
-  if (aboutBtn && aboutContent) {
-    aboutBtn.addEventListener('click', function() {
-      this.classList.toggle('on-click');
-      aboutContent.classList.toggle('is-open');
-    });
-  }
-});
-
-// Luminous（ライトボックス）の初期化 - スライダーなしページ用
-window.addEventListener('load', () => {
-  if (typeof LuminousGallery === 'undefined') return;
-
-  const zoomImages = document.querySelectorAll('.zoom-img');
-  if (zoomImages.length) {
-    new LuminousGallery(zoomImages, {}, {
-      closeOnOverlayClick: true,
-      closeOnScroll: false,
-      closeButton: true,
-    });
-  }
 });

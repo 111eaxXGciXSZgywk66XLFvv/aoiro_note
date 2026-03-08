@@ -35,11 +35,6 @@
   transition: transform 0.3s ease;
 }
 
-.back-to-top-btn:hover {
-  transform: translateX(-5px);
-}
-
-
 footer {
     background-color: #c1cbda;
 }

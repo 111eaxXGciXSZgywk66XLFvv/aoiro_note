@@ -194,6 +194,14 @@
   z-index: 1000;
 }
 
+.lum-lightbox-image-wrapper img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 
 /* code ark */
 
@@ -274,11 +282,6 @@
     align-items: flex-start;
   }
 
-  .concept-box,
-  .role-box {
-    width: 90%;
-  }
-
   .gallery {
     display: flex;
     align-content: center;
@@ -287,9 +290,7 @@
 
   .gallery-img {
     flex: 1;
-
   }
-
 }
 
 footer {
